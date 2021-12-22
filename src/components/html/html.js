@@ -1,51 +1,88 @@
 import * as React from "react";
 import * as style from "./html.module.css";
 import { Helmet } from "react-helmet";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import get from "lodash/get";
+import CSS from "../../components/cssBreakLine/cssBreakLine";
 
 const HTML = () => {
-  const first = useRef(null);
-  const iframe = useRef(null);
-  const btn = useRef(null);
+  const defaultStyle = {
+    display: "block",
+    overflow: "hidden",
+    resize: "none",
+    width: "100%",
+    backgroundColor: "mediumSpringGreen",
+  };
 
-  console.log("first ", first);
+  const textareaRef = useRef(null);
+  const [currentValue, setCurrentValue] = useState(""); // you can manage data with it
 
-  // btn.addEventListener("click", () => {
-  //   var html = first.textContent;
-  //   iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
-  // });
-  //
-  // first.addEventListener("keyup", () => {
-  //   var html = first.textContent;
-  //   iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
-  // });
-  //
-  // first.addEventListener("paste", function (e) {
-  //   e.preventDefault();
-  //   var text = e.clipboardData.getData("text/plain");
-  //   document.execCommand("insertText", false, text);
-  // });
+  useEffect(() => {
+    textareaRef.current.style.height = "0px";
+    const scrollHeight = textareaRef.current.scrollHeight;
+    textareaRef.current.style.height = scrollHeight + "px";
+  }, [currentValue]);
+
+  function showPreview() {
+    let htmlCode = document.getElementById("htmlCode").value;
+    let cssCode =
+      "<style>" + document.getElementById("cssCode").value + "</style>";
+    let jsCode =
+      "<scri" +
+      "pt>" +
+      document.getElementById("jsCode").value +
+      "</scri" +
+      "pt>";
+    let frame =
+      document.getElementById("preview-window").contentWindow.document;
+    frame.open();
+    frame.write(htmlCode + cssCode + jsCode);
+    frame.close();
+  }
 
   return (
     <>
-      <Helmet>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="code.css" />
-        <title>Html editor</title>
-      </Helmet>
-      <body>
-        <div className={style.mainEditor}>
-          <button className="btn">Run</button>
-          <div className={style.first} contentEditable>
-            writecode
-          </div>
-          <iframe className={style.second}></iframe>
-        </div>
-
-        {/*<script src="editor.js"></script>*/}
-      </body>
+      <div className={style.codeArea}>
+        <textarea
+          className={style.textArea}
+          id="htmlCode"
+          placeholder="HTML Code"
+          // onInput="showPreview()"
+          onInput={showPreview}
+        />
+        <textarea
+          className={style.textArea}
+          id="cssCode"
+          placeholder="CSS Code"
+          // onInput="showPreview()"
+          onInput={showPreview}
+        />
+        <textarea
+          className={style.textArea}
+          id="jsCode"
+          placeholder="JavaScript Code"
+          // onInput="showPreview()"
+          onInput={showPreview}
+        />
+      </div>
+      <div className={style.previewArea} className="preview-area">
+        <iframe className={style.iFrame} id="preview-window" />
+      </div>
+      Resizable
+      <textarea id="htmlCode" placeholder="HTML Code" onInput={showPreview}>
+        <CSS />
+      </textarea>
+      <textarea
+        ref={textareaRef}
+        style={style}
+        value={currentValue}
+        onChange={(e) => {
+          setCurrentValue(e.target.value);
+          //to do something with value, maybe callback?
+        }}
+      >
+        <CSS />
+      </textarea>
     </>
   );
 };

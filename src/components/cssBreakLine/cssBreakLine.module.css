@@ -1,0 +1,31 @@
+.container {
+    font-size: 14px;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    /* first breakpoint*/
+    --w1: 1600px;
+    --n: 8;
+    /* second breakpoint*/
+    --w2: 10px;
+    --m: 4;
+
+    display: grid;
+    grid-template-columns:
+    repeat(auto-fill,
+    minmax(
+            clamp(
+                    clamp(
+                            100% / (var(--n) + 1) + 0.1%,
+                            (var(--w1) - 100vw) * 1000, 100% / (var(--m) + 1) + 0.1%), (var(--w2) - 100vw) * 1000, 100%), 1fr));
+    /*minmax(*/
+    /*    !*clamp(*! clamp(*/
+    /*100% / (var(--n) + 1) + 0.1%,*/
+    /*(var(--w1) - 100vw) * 1000 !*,*! !*100% / (var(--m) + 1) + 0.1%*! !*),*! !*(var(--w2) - 100vw) * 1000,*!, 100%), 1fr));*/
+    gap: 10px;
+}
+
+.container > div {
+    /*height: 100px;*/
+    /*background: red;*/
+}

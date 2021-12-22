@@ -9,6 +9,7 @@ import MIT from "../images/ayseSite1.png";
 import AboutPhotos from "../components/aboutPhotos/aboutPhotos";
 import ProjectsContainer from "../components/projectsContainer/projectsContainer";
 import Contact from "../components/contact";
+import { Link } from "gatsby";
 
 const IndexPage = () => {
   return (
@@ -26,6 +27,7 @@ const IndexPage = () => {
         <div id="home" />
 
         <div className="py-6 md:py-10">
+          <Link to="/code">CODE</Link>
           <div
             className="w-full text-center tracking-widest px-16 md:px-32 py-8 md:py-16 text-sm md:text-lg lg:text-2xl"
             style={{ backgroundColor: "#B76E79" }}

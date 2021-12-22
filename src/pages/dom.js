@@ -4,8 +4,9 @@ import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import DomTraversal from "../components/domTraversal";
 import ProjectsLayout from "../components/projectsLayout";
+import CSS from "../components/cssBreakLine/cssBreakLine";
 
-const Experiences = () => {
+const Dom = () => {
   return (
     <>
       <Helmet>
@@ -33,9 +34,11 @@ const Experiences = () => {
         All of the logic used in this page stems from the DOM. I used a for loop to traverse the node tree.
         For the fun facts, I used getElementsByTagName to find the <td> element and an if statement to change the text color."
         />
+
+        <CSS />
       </Layout>
     </>
   );
 };
 
-export default Experiences;
+export default Dom;

@@ -3,14 +3,15 @@ body {
 }
 
 .pane {
-    height: 50vh;
+    padding-top: 1%;
+    height: 30vh;
     display: flex;
 }
 
 .topPane {
     background-color: hsl(225, 6%, 25%);
 
-    height: 50vh;
+    height: 43vh;
     display: flex;
 }
 

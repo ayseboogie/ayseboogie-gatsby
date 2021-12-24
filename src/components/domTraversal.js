@@ -102,10 +102,8 @@ export class DomTraversal extends Component {
     const search = (tree, target) => {
       if (tree.id == target) {
         matchList.push(tree.label);
-        // console.log(matchList);
         alert(matchList);
         if (matchList.length === 2) {
-          // alert(matchList);
         }
       }
       for (const child of tree.child) {

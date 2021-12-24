@@ -1,5 +1,5 @@
 import * as React from "react";
-import App from "../components/app";
+import App from "./app";
 
 // markup
 const IndexPage = () => {

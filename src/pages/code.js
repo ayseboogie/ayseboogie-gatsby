@@ -41,31 +41,7 @@ const Code = () => {
         <div className="text-center text-3xl py-10">
           Responsive Layout Without Media Queries
         </div>
-        <div className="pb-10 max-w-2xl lg:max-w-4xl m-auto text-center">
-          I read an article from
-          <a
-            className="text-gray-400 font-bold"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://css-tricks.com/responsive-layouts-fewer-media-queries/"
-          >
-            &nbsp;*CSS-TRICKS&nbsp;
-          </a>
-          that talked about responsive layouts without using media queries. I
-          use media queries everywhere..what do you mean? Responsive design is
-          vastly necessary and I think this a cool alternative. Try resizing the
-          screen to try it out!
-          <br />
-          <br />
-          We'll take it big screen -> small. When the screen width is bigger
-          than W1(1300px), we clamp to 100%/(N + 1) + 0.1%), or N(6) items per
-          row. When the screen width is bigger than W2 but smaller than W1, we
-          clamp to 100%/(M + 1) + 0.1%), or M(4) items per row. Now we're down
-          to the first clamp that occurs when the screen width is smaller than
-          W2(900px), but still larger than W3(20px), where we clamp to 100%/(P +
-          1) + 0.1%), or P(2) items per row. I set W3 to such a low pixel
-          because I never want my rows to break to 1 item per.
-        </div>
+
         {/*<div className="max-w-2xl lg:max-w-4xl m-auto">*/}
         <hr />
         {/*</div>*/}

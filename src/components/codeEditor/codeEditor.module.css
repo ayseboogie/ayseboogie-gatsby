@@ -4,8 +4,20 @@ body {
 
 .pane {
     padding-top: 1%;
-    height: 30vh;
+    height: 28vh;
     display: flex;
+}
+
+@media (max-width: 1300px) {
+    .pane {
+        height: 38vh;
+    }
+}
+
+@media (max-width: 900px) {
+    .pane {
+        height: 58vh;
+    }
 }
 
 .topPane {

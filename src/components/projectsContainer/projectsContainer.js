@@ -98,7 +98,7 @@ const ProjectsContainer = () => {
             to="/experiences"
             className="text-white whitespace-nowrap lg:hidden text-sm"
           >
-            DOM Traversal
+            Nifty Code
           </Link>
           <StaticImage
             src="../../images/dom.png"

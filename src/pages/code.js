@@ -7,7 +7,7 @@ const Code = () => {
   return (
     <main>
       <title>Not found</title>
-      <App />
+      <div>alright</div>
     </main>
   );
 };

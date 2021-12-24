@@ -1,10 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./app";
+import * as React from "react";
+import App from "../components/app";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+// markup
+const IndexPage = () => {
+  return (
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+};
+
+export default IndexPage;

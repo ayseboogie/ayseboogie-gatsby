@@ -129,14 +129,14 @@ function App() {
         <Editor
           language="xml"
           displayName="HTML"
-          value={html}
-          onChange={setHtml}
+          // value={html}
+          // onChange={setHtml}
         />
         <Editor
           language="css"
           displayName="CSS"
-          value={css}
-          onChange={setCss}
+          // value={css}
+          // onChange={setCss}
         />
         {/*<Editor*/}
         {/*    language="javascript"*/}

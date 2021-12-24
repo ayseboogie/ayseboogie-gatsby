@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Editor from "./Editor";
-import useLocalStorage from "./hooks";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 function App() {
   const [html, setHtml] = useLocalStorage("html", "");
@@ -24,6 +24,7 @@ function App() {
 
   return (
     <>
+      App js
       <div className="pane top-pane">
         <Editor
           language="xml"

@@ -41,7 +41,6 @@ const Code = () => {
         <div className="text-center text-3xl py-10">
           Responsive Layout Without Media Queries
         </div>
-        <CodeEditor />
         <div className="pb-10 max-w-2xl lg:max-w-4xl m-auto text-center">
           I read an article from
           <a

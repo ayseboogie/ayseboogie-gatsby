@@ -171,7 +171,10 @@ export class DomTraversal extends Component {
           <br />
           <br />
 
-          <hr />
+          <div className="max-w-2xl lg:max-w-4xl m-auto">
+            <hr />
+          </div>
+
           <h1
             style={{
               color: "green",

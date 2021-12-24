@@ -2,9 +2,9 @@ import * as React from "react";
 import { Helmet } from "react-helmet";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
-import ProjectsLayout from "../components/projectsLayout";
 import DomTraversal from "../components/domTraversal";
-import CodeEditor from "../components/codeEditor/index";
+import ProjectsLayout from "../components/projectsLayout";
+import CodeEditor from "../components/codeEditor/app";
 
 const Code = () => {
   return (

@@ -6,7 +6,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       module: {
         rules: [
           {
-            test: /react-split-pane/,
+            test: /react-split-pane@next/,
             use: loaders.null(),
           },
           {

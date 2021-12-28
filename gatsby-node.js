@@ -4,7 +4,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       module: {
         rules: [
           {
-            test: /react-lifecycles-compat/,
+            test: /react-split-pane/,
             use: loaders.null(),
           },
         ],

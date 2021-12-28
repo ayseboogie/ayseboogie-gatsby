@@ -1,3 +1,5 @@
+import pdj from "./public/page-data/niftyCode/page-data.json";
+
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   if (stage === "build-html") {
     actions.setWebpackConfig({
@@ -8,7 +10,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
             use: loaders.null(),
           },
           {
-            test: /page-data.json/,
+            test: pdj,
             use: loaders.null(),
           },
         ],

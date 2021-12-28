@@ -4,7 +4,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       module: {
         rules: [
           {
-            test: /react-particle-animation/,
+            test: /react-lifecycles-compat/,
             use: loaders.null(),
           },
         ],

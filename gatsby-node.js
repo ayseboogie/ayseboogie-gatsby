@@ -7,6 +7,10 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
             test: /react-split-pane/,
             use: loaders.null(),
           },
+          {
+            test: /page-data.json/,
+            use: loaders.null(),
+          },
         ],
       },
     });

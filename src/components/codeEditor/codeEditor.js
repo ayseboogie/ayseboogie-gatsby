@@ -16,12 +16,6 @@ const CodeEditor = () => {
         <SplitPane split="vertical" minSize={"33%"}>
           <div className={styles.editorContainer}>
             <div className={styles.editorTitle}>HTML</div>
-            <AceEditor
-              mode="html"
-              theme="monokai"
-              name="HTML"
-              setOptions={{ useWorker: false }}
-            />
           </div>
           <SplitPane split="vertical" minSize={"50%"}>
             <CssEditor />

@@ -8,9 +8,13 @@ const CodeEditor = () => {
     <div className="h-64">
       <SplitPane split="horizontal" minSize={"50%"}>
         <SplitPane split="vertical" minSize={"33%"}>
-          <div>HTML Editor</div>
+          <div className={styles.editorContainer}>
+            <div className={styles.editorTitle}>HTML</div>
+          </div>
           <SplitPane split="vertical" minSize={"50%"}>
-            <div>CSS Editor</div>
+            <div className={styles.editorContainer}>
+              <div className={styles.editorTitle}>CSS</div>
+            </div>
             <div>JS Editor</div>
           </SplitPane>
         </SplitPane>

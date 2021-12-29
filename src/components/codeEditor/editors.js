@@ -5,8 +5,24 @@ import "ace-builds/src-noconflict/mode-html";
 import "ace-builds/src-noconflict/mode-css";
 import "ace-builds/src-noconflict/theme-monokai";
 
-import styles from "./editors.module.css";
+import * as styles from "./editors.module.css";
+
+export const JavascriptEditor = () => {
+  return <Editor title={"Javascript"} />;
+};
+
+export const HtmlEditor = () => {
+  return <Editor title={"HTML"} />;
+};
+
+export const CssEditor = () => {
+  return <Editor title={"CSS"} />;
+};
 
 const Editor = ({ mode, onChange, value, title, height }) => {
-  return <div>editor</div>;
+  return (
+    <div className={styles.editorContainer}>
+      <div className={styles.editorTitle}>{title}</div>
+    </div>
+  );
 };

@@ -7,6 +7,14 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
             test: /react-split-pane@next/,
             use: loaders.null(),
           },
+          {
+            test: /react-ace/,
+            use: loaders.null(),
+          },
+          {
+            test: /ace-builds/,
+            use: loaders.null(),
+          },
         ],
       },
     });

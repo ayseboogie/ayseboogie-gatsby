@@ -7,6 +7,7 @@ import "ace-builds/src-noconflict/mode-css";
 import "ace-builds/src-noconflict/theme-monokai";
 
 import * as styles from "./codeEditor.module.css";
+import { CssEditor, JavascriptEditor } from "./editors";
 
 const CodeEditor = () => {
   return (
@@ -23,16 +24,8 @@ const CodeEditor = () => {
             />
           </div>
           <SplitPane split="vertical" minSize={"50%"}>
-            <div className={styles.editorContainer}>
-              <div className={styles.editorTitle}>CSS</div>
-              <AceEditor
-                mode="css"
-                theme="monokai"
-                name="CSS"
-                setOptions={{ useWorker: false }}
-              />
-            </div>
-            <div>JS Editor</div>
+            <CssEditor />
+            <JavascriptEditor />
           </SplitPane>
         </SplitPane>
         <div>Preview Page</div>

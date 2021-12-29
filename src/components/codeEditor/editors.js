@@ -23,6 +23,12 @@ const Editor = ({ mode, onChange, value, title, height }) => {
   return (
     <div className={styles.editorContainer}>
       <div className={styles.editorTitle}>{title}</div>
+      <AceEditor
+        mode={mode}
+        theme="monokai"
+        name={title}
+        setOptions={{ useWorker: false }}
+      />
     </div>
   );
 };

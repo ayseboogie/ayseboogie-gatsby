@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import SplitPane from "react-split-pane";
-import { CssEditor, HtmlEditor, JavascriptEditor } from "./editors";
 
 import * as styles from "./codeEditor.module.css";
 
@@ -9,10 +8,10 @@ const CodeEditor = () => {
     <div className="h-64">
       <SplitPane split="horizontal" minSize={"50%"}>
         <SplitPane split="vertical" minSize={"33%"}>
-          <HtmlEditor />
+          <div>HTML Editor</div>
           <SplitPane split="vertical" minSize={"50%"}>
-            <CssEditor />
-            <JavascriptEditor />
+            <div>CSS Editor</div>
+            <div>JS Editor</div>
           </SplitPane>
         </SplitPane>
         <div>Preview Page</div>

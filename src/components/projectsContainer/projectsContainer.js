@@ -6,125 +6,179 @@ import * as style from "./projectsContainer.module.css";
 
 const ProjectsContainer = () => {
   return (
-    <div className="w-full bg-gray-800 text-2xl tracking-widest pb-10 py-8 md:py-16">
-      <div className="flex flex-wrap justify-center text-center lg:px-32">
+    <div className="w-full bg-gray-800 text-2xl tracking-widest pb-10 py-8 md:py-16 px-6">
+      <div className={style.container}>
         {/* 0 */}
-        <div
-          className={cn(
-            "relative w-3/4 md:w-1/3 mx-3 lg:py-2",
-            style.projectsContainer
-          )}
-        >
-          <Link to="/chiFarms" className="text-white lg:hidden text-sm">
-            Chi Farms
-          </Link>
-          <StaticImage
-            src="../../images/chiFarms.png"
-            alt="Ecommerce Site"
-            className={cn("w-full opacity-100 block rounded-md", style.image)}
-            style={{
-              transition: ".5s ease",
-              backfaceVisibility: "hidden",
-            }}
-          />
-          <Link
-            to="/chiFarms"
-            className={cn("opacity-0 absolute text-center", style.projectsText)}
+        <div className="relative w-full">
+          <div
+            className={cn(
+              "opacity-100 absolute text-center",
+              style.translateDiv
+            )}
             style={{
               transition: ".5 ease",
-              top: "27%",
               left: "50%",
-              transform: "translate(-50%, -50%)",
             }}
           >
-            <div className="text-white text-sm invisible lg:visible md:text-lg lg:text-2xl md:my-16">
-              Chi Farms
+            <div className="text-white text-center whitespace-nowrap text-sm">
+              <Link href="/chiFarms">Chi Farms</Link>
             </div>
-            <div className="text-white text-sm md:text-base lg:text-xl underline">
-              details
-            </div>
+          </div>
+          <Link href="/chiFarms">
+            <StaticImage
+              src="../../images/chiFarms.png"
+              alt="Chi Farms"
+              className={cn("w-full opacity-100 block rounded-md", style.image)}
+              style={{
+                transition: ".5s ease",
+                backfaceVisibility: "hidden",
+              }}
+            />
           </Link>
         </div>
 
         {/* 1 */}
-        <div
-          className={cn(
-            "relative w-3/4 md:w-1/3 mx-3 lg:py-2",
-            style.projectsContainer
-          )}
-        >
-          <Link
-            to="/experiences"
-            className="text-white whitespace-nowrap lg:hidden text-sm"
-          >
-            Lonely Planet Experiences
-          </Link>
-          <StaticImage
-            src="../../images/lpExperiences.png"
-            alt="LP Experiences"
-            className={cn("w-full opacity-100 block rounded-md", style.image)}
-            style={{
-              transition: ".5s ease",
-              backfaceVisibility: "hidden",
-            }}
-          />
-          <Link
-            to="/experiences"
-            className={cn("opacity-0 absolute text-center", style.projectsText)}
+        <div className="relative w-full">
+          <div
+            className={cn(
+              "opacity-100 absolute text-center",
+              style.translateDiv
+            )}
             style={{
               transition: ".5 ease",
-              top: "27%",
               left: "50%",
-              transform: "translate(-50%, -50%)",
             }}
           >
-            <div className="text-white text-sm invisible lg:visible md:text-lg lg:text-2xl md:my-16">
-              Lonely Planet Experiences
+            <div className="text-white text-center whitespace-nowrap text-sm">
+              <Link href="/experiences">Lonely Planet Experiences</Link>
             </div>
-            <div className="text-white text-sm md:text-base lg:text-xl underline">
-              details
-            </div>
+          </div>
+          <Link href="/experiences">
+            <StaticImage
+              src="../../images/lpExperiences.png"
+              alt="Lonely Planet Experiences"
+              className={cn("w-full opacity-100 block rounded-md", style.image)}
+              style={{
+                transition: ".5s ease",
+                backfaceVisibility: "hidden",
+              }}
+            />
           </Link>
         </div>
 
         {/* 2 */}
-        <div
-          className={cn(
-            "relative w-3/4 md:w-1/3 mx-3 lg:py-2",
-            style.projectsContainer
-          )}
-        >
-          <Link
-            to="/experiences"
-            className="text-white whitespace-nowrap lg:hidden text-sm"
-          >
-            Dom
-          </Link>
-          <StaticImage
-            src="../../images/dom.png"
-            alt="Dom"
-            className={cn("w-full opacity-100 block rounded-md", style.image)}
-            style={{
-              transition: ".5s ease",
-              backfaceVisibility: "hidden",
-            }}
-          />
-          <Link
-            to="/dom"
-            className={cn("opacity-0 absolute text-center", style.projectsText)}
+        <div className="relative w-full">
+          <div
+            className={cn(
+              "opacity-100 absolute text-center",
+              style.translateDiv
+            )}
             style={{
               transition: ".5 ease",
-              top: "27%",
               left: "50%",
-              transform: "translate(-50%, -50%)",
             }}
           >
-            <div className="text-white text-sm invisible lg:visible md:text-lg lg:text-2xl md:my-16">
-              Dom
+            <div className="text-white text-center whitespace-nowrap text-sm">
+              <Link href="/nextSite">NextJS Site</Link>
             </div>
-            <div className="text-white text-sm md:text-base lg:text-xl underline">
-              details
+          </div>
+          <Link href="/nextSite">
+            <StaticImage
+              src="../../images/gatsbySite.png"
+              alt="NextJS Site"
+              className={cn("w-full opacity-100 block rounded-md", style.image)}
+              style={{
+                transition: ".5s ease",
+                backfaceVisibility: "hidden",
+              }}
+            />
+          </Link>
+        </div>
+
+        {/* 3 */}
+        <div className="relative w-full">
+          <div
+            className={cn(
+              "opacity-100 absolute text-center",
+              style.translateDiv
+            )}
+            style={{
+              transition: ".5 ease",
+              left: "50%",
+            }}
+          >
+            <div className="text-white text-center whitespace-nowrap text-sm">
+              <Link href="/domTraversal">Dom Traversal</Link>
             </div>
+          </div>
+          <Link href="/domTraversal">
+            <StaticImage
+              src="../../images/dom.png"
+              alt="Dom Traversal"
+              className={cn("w-full opacity-100 block rounded-md", style.image)}
+              style={{
+                transition: ".5s ease",
+                backfaceVisibility: "hidden",
+              }}
+            />
+          </Link>
+        </div>
+
+        {/* 4 */}
+        <div className="relative w-full">
+          <div
+            className={cn(
+              "opacity-100 absolute text-center",
+              style.translateDiv
+            )}
+            style={{
+              transition: ".5 ease",
+              left: "50%",
+            }}
+          >
+            <div className="text-white text-center whitespace-nowrap text-sm">
+              <Link href="/responsiveLayout">Responsive Layout</Link>
+            </div>
+          </div>
+          <Link href="/responsiveLayout">
+            <StaticImage
+              src="../../images/responsiveLayout.png"
+              alt="Responsive Layout"
+              className={cn("w-full opacity-100 block rounded-md", style.image)}
+              style={{
+                transition: ".5s ease",
+                backfaceVisibility: "hidden",
+              }}
+            />
+          </Link>
+        </div>
+
+        {/* 5 */}
+        <div className="relative w-full">
+          <div
+            className={cn(
+              "opacity-100 absolute text-center",
+              style.translateDiv
+            )}
+            style={{
+              transition: ".5 ease",
+              left: "50%",
+            }}
+          >
+            <div className="text-white text-center whitespace-nowrap text-sm">
+              <Link href="/codeEditor">Code Editor</Link>
+            </div>
+          </div>
+          <Link href="/codeEditor">
+            <StaticImage
+              src="../../images/nextjsCodeEditor.jpeg"
+              alt="Code Editor"
+              className={cn("w-full opacity-100 block rounded-md", style.image)}
+              style={{
+                transition: ".5s ease",
+                backfaceVisibility: "hidden",
+              }}
+            />
           </Link>
         </div>
       </div>

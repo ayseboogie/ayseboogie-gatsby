@@ -6,3 +6,77 @@
 .projectsContainer:hover .projectsText {
     opacity: 1;
 }
+
+.container:hover .image {
+    cursor: pointer;
+}
+
+
+.container {
+    /* first breakpoint*/
+    --w1: 12000px;
+    --n: 4;
+    /* second breakpoint*/
+    --w2: 800px;
+    --m: 3;
+    /* third breakpoint*/
+    --w3: 500px;
+    --p: 2;
+
+    display: grid;
+    grid-template-columns:
+    repeat(auto-fill,
+    minmax(clamp(clamp(clamp(
+                    100% / (var(--n) + 1) + 0.1%,
+                    (var(--w1) - 100vw) * 1000,
+                    100% / (var(--m) + 1) + 0.1%),
+            (var(--w2) - 100vw) * 1000,
+            100% / (var(--p) + 1) + 0.1%),
+            (var(--w3) - 100vw) * 1000,
+            100%), 1fr));
+    gap: 2rem;
+}
+
+.container > div {
+    height: 200px;
+}
+
+.translateDiv {
+    transform: translate(-50%, 210%);
+}
+
+@media (min-width: 170px) {
+    .translateDiv {
+        transform: translate(-50%, 50%);
+    }
+}
+
+@media (min-width: 270px) {
+    .translateDiv {
+        transform: translate(-50%, -20%);
+    }
+}
+
+@media (min-width: 320px) {
+    .translateDiv {
+        transform: translate(-50%, -80%);
+    }
+}
+
+@media (min-width: 365px) {
+    .translateDiv {
+        transform: translate(-50%, -100%);
+    }
+}
+
+@media (min-width: 500px) {
+    .translateDiv {
+        transform: translate(-50%, -40%);
+    }
+}
+
+@media (min-width: 685px) {
+    .translateDiv {
+        transform: translate(-50%, -100%);
+    }
+}

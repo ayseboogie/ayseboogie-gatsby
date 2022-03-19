@@ -50,7 +50,7 @@ const IndexPage = () => {
         </div>
 
         <div className="text-sm md:text-lg tracking-widest m-auto text-center px-4 md:px-0 max-w-2xl lg:max-w-4xl py-6 md:py-16">
-          <h1>Hey, I&apos;m Ayse.</h1>
+          <h1>Hey, I&apos;m Ayse B.</h1>
           <p>I am a frontend engineer with a passion for web development.</p>
           I enjoy taking on new challenges and continuously growing my skill
           set.

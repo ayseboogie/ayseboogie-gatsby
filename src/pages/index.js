@@ -49,16 +49,15 @@ const IndexPage = () => {
           <hr className="flex flex-grow md:mx-16 lg:mx-24" />
         </div>
 
-        <div className="w-full text-center text-sm md:text-lg lg:text-2xl tracking-widest px-16 md:px-32 py-6 md:py-16">
-          <h1>Hey, I'm Ayse.</h1>
+        <div className="text-sm md:text-lg tracking-widest m-auto text-center px-4 md:px-0 max-w-2xl lg:max-w-4xl py-6 md:py-16">
+          <h1>Hey, I&apos;m Ayse.</h1>
           <p>I am a frontend engineer with a passion for web development.</p>
           I enjoy taking on new challenges and continuously growing my skill
           set.
           <br />
           I am a React developer by day. I have built freelance sites with
-          WordPress and Duda. I have upcoming projects in Wix and Shopify.
-          <br />I developed this website with React in a Gatsby framework using
-          Tailwind styling.
+          WordPress and Duda. I developed this website with React in the NextJS
+          framework using Tailwind styling.
           <br />I received my computer science degree, with a business
           administration minor, from UT Chattanooga.
           <br />

@@ -6,15 +6,14 @@ import * as style from "./header.module.css";
 
 const Header = ({ pageTitle }) => {
   return (
-    <div className="w-full" style={{ display: "grid" }}>
+    <div className="w-full h-auto" style={{ display: "grid" }}>
       <StaticImage
         loading="eager"
         style={{
           gridArea: "1/1",
-          maxHeight: "425px",
         }}
+        imgStyle={{height: "100%"}}
         layout="fullWidth"
-        aspectRatio={3 / 1}
         alt=""
         src={"../../images/weaversBend.jpeg"}
         formats={["auto", "webp", "avif"]}
